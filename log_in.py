@@ -9,6 +9,14 @@ class User():
         self.password = self.data_list[2]
         self.gender = self.data_list[3]
         self.age = self.data_list[4]
+        self.test_result = {
+            'Squat': 0,
+            'Dead Lift': 0,
+            'Millitary Press': 0,
+            'Bench Press': 0,
+            'Pull Ups': 0,
+            'Run 5km': 0
+        }
 
     def get_name(self):
         return self.name

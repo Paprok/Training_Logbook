@@ -8,17 +8,6 @@ class User():
         self.weight = self.assign_int("weight")
         self.goals = self.choose_goals()
         self.file_name = "users/" + self.name.upper() + "_" + self.surname.upper() + ".txt"
-<<<<<<< Updated upstream
-        self.test_result = [
-            'Squat': 0,
-            'Dead Lift',
-            'Millitary Press',
-            'Bench Press',
-            'Pull Ups',
-            'Run 5km'
-        ]
-=======
->>>>>>> Stashed changes
 
     def get_data_from_user(self, data_type):
         user_data = input(data_type)
@@ -100,4 +89,6 @@ def start_module():
     user.export_data()
 
 
-start_module()
+# start_module()
+
+# dodać sprawdzanie czy użytkownik już istnieje

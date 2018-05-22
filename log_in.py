@@ -1,9 +1,9 @@
-# import menu
+import menu
 
 
 class User():
     def __init__(self, file_name):
-        self.data_list = self.open_user_data(file_name)
+        self.data_list = self.open_data(file_name)
         self.name = self.data_list[0]
         self.surname = self.data_list[1]
         self.password = self.data_list[2]
@@ -40,6 +40,7 @@ class User():
 
 
 def find_user_data_file():
+    print('\nPlease enter your login data!')
     name = input("Your name: ")
     surname = input("Your surname: ")
     file_name = "users/" + name.upper() + "_" + surname.upper() + ".txt"
@@ -77,6 +78,7 @@ def start_module():
     if check_password(user_data_list):
         user = User(user_data_file)
         print(user.data_list)
+        menu.start_module(user)
 
-# module start menu
-start_module()
+# # module start menu
+# start_module()

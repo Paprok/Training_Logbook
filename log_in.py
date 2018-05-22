@@ -9,6 +9,8 @@ class User():
         self.password = self.data_list[2]
         self.gender = self.data_list[3]
         self.age = self.data_list[4]
+        self.weight = self.data_list[5]
+        self.goal = self.data_list[6]
         self.test_result = {
             'Squat': 0,
             'Dead Lift': 0,

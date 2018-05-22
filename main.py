@@ -1,14 +1,18 @@
 import log_in
 import register
+import menu
+import sys
+import os
+
 
 def main():
     while True:
         handle_menu()
         try:
             choose()
-        except KeyError as err:
-            ui.print_error_message(err)
-
+        except KeyError:
+            print('Wrong Key!!!')
+       
 
 def choose():
     'choses from options'
@@ -21,6 +25,11 @@ def choose():
         sys.exit(0)
     else:
         raise KeyError("There is no such option.")
+
+
+def handle_menu():
+    print('1. Log in')
+    print('2. Register')
 
 
 if __name__ == '__main__':

@@ -1,4 +1,8 @@
-def start_module():
+import log_in
+import register
+
+
+def start_module():    
     option = 1
     while option != '0':
         print_menu()
@@ -23,4 +27,5 @@ def start_module():
 
 
 def print_menu():
-    pass
+    print('1. Generate your training session')
+    print('2. ')

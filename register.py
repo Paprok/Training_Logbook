@@ -8,7 +8,18 @@ class User():
         self.weight = self.assign_int("weight")
         self.goals = self.choose_goals()
         self.file_name = "users/" + self.name.upper() + "_" + self.surname.upper() + ".txt"
-        
+<<<<<<< Updated upstream
+        self.test_result = [
+            'Squat': 0,
+            'Dead Lift',
+            'Millitary Press',
+            'Bench Press',
+            'Pull Ups',
+            'Run 5km'
+        ]
+=======
+>>>>>>> Stashed changes
+
     def get_data_from_user(self, data_type):
         user_data = input(data_type)
         return user_data
@@ -34,7 +45,7 @@ class User():
 
     def change_name(self, new_name):
         self.name = new_name
-            
+
     def create_password(self):
         password_ok = None
         while password_ok is None:
@@ -59,7 +70,7 @@ class User():
                 return goals[choose]
             else:
                 print("Unknown choice, try again.")
-            
+
     def assign_int(self, value_name):
         is_int = False
         while is_int is False:

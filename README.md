@@ -4,42 +4,21 @@ Test your abilities. Get one of our unique workout programs and log your progres
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Pull or copy code and run it in your console. 
+It is very early alfa version :) so don't expect flashy graphic and mobile version (it will come soon)
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Python3 and any working computer
 
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
 
 ```
-Give the example
-```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* 
+* Visual Studio Code
 
 ## Contributing
 
@@ -48,9 +27,9 @@ Add additional notes about how to deploy this on a live system
 
 
 ## Authors
-* **Rafał Becla** - *Code dev, System architecture* - 
+* **Rafał Becla** - *Code dev, System architecture* - [Paprok]https://github.com/Paprok
 * **Michal Wisniewski** - *Concept development, Code dev* - [mihuwis](https://github.com/mihuwis)
-* **Dariusz Domanski** - *Code dev* - 
+* **Dariusz Domanski** - *Code dev* - [darDomanski]https://github.com/darDomanski
 
 ## Acknowledgments
 

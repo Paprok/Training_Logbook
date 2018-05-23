@@ -87,9 +87,21 @@ class User():
                                                str(self.weight),
                                                self.goals])
 
+    def tests_to_export(self):
+        tests_to_export = "#0\t".join(exercise for exercise in ['Squat',
+                                                                'Dead Lift',
+                                                                'Millitary Press',
+                                                                'Bench Press',
+                                                                'Pull Ups',
+                                                                'Run 5km'])
+        tests_to_export = tests_to_export + "#0"
+        return tests_to_export
+        
+
+
     def export_data(self):
         with open(self.file_name, "w") as data_file:
-            data_file.write(self.user_data_to_export())
+            data_file.write(self.user_data_to_export() + "\n" + self.tests_to_export())
 
 
 def start_module():

@@ -1,13 +1,21 @@
+import os.path
+
 class User():
     def __init__(self):
-        self.name = input("Name: ")
-        self.surname = input("Surname: ")
-        self.password = self.create_password()
-        self.gender = self.get_gender()
-        self.age = self.assign_int("age")
-        self.weight = self.assign_int("weight")
-        self.goals = self.choose_goals()
-        self.file_name = "users/" + self.name.upper() + "_" + self.surname.upper() + ".txt"
+        self.profile_exists = False
+        if self.profile_exists is False:
+            self.name = input("Name: ")
+            self.surname = input("Surname: ")
+            self.file_name = "users/" + self.name.upper() + "_" + self.surname.upper() + ".txt"
+            if os.path.exists(self.file_name):
+                print("User already exists, log in or register new account.")
+                self.profile_exists = True
+            else:
+                self.password = self.create_password()
+                self.gender = self.get_gender()
+                self.age = self.assign_int("age")
+                self.weight = self.assign_int("weight")
+                self.goals = self.choose_goals()
 
     def get_data_from_user(self, data_type):
         user_data = input(data_type)
@@ -86,9 +94,9 @@ class User():
 
 def start_module():
     user = User()
-    user.export_data()
+    if not user.profile_exists:
+        user.export_data()
 
-
-# start_module()
+#start_module()
 
 # dodać sprawdzanie czy użytkownik już istnieje

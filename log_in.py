@@ -12,15 +12,8 @@ class User():
         self.age = self.data_list[4]
         self.weight = self.data_list[5]
         self.goal = self.data_list[6]
-        self.test_result = {
-            'Squat': 0,
-            'Dead Lift': 0,
-            'Millitary Press': 0,
-            'Bench Press': 0,
-            'Pull Ups': 0,
-            'Run 5km': 0
-        }
-
+        self.test_result = self.get_test_result(file_name)
+  
     def get_name(self):
         return self.name
 
@@ -46,6 +39,20 @@ class User():
         with open(file_name, "r") as user_data_file:
             user_data = user_data_file.readlines()
         return user_data[0].split("\t")
+
+    def get_test_result(self, file_name):
+        with open(file_name, "r",) as user_data_file:
+            reader = user_data_file.readlines()
+            user_test_list = reader[1].split("\t")
+            user_test_dict = {}
+
+            for test in user_test_list:
+                test_and_score = test.split("#")
+                print(test_and_score)
+                user_test_dict[test_and_score[0]] = test_and_score[1]
+            print(user_test_dict)
+
+        return user_test_dict
 
 
 def find_user_data_file():

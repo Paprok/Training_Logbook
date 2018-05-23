@@ -10,12 +10,12 @@ def start_module(user):
         option = input('\nPlease choose option: ')
         if option == "1":
             test.start_module(user)
-        # elif option == "2":
-        #     # profile         
-        # elif option == "3":
-        #     # create training session          
-        # elif option == "4":
-        #     # start/ check traingin
+        elif option == "2":
+            show_profile(user)        
+        elif option == "3":
+            training.start_module(user)          
+        elif option == "4":
+            log.start_module(user)
         # elif option == "5":
         #     # 
         # elif option == "6":
@@ -30,4 +30,10 @@ def start_module(user):
 def print_menu():
     print('\nMain Menu:')
     print('1. Test Menu ')
-    print('2. Generate your training session')
+    print('2. Show profile')
+    print('3. Create Training Session')
+    print('4. Show/ Start Training')
+
+
+def show_profile(user):
+    print(user.get_name + user.get_surname)

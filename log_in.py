@@ -1,3 +1,4 @@
+import os.path
 import menu
 
 
@@ -49,15 +50,16 @@ class User():
 
 def find_user_data_file():
     print('\nPlease enter your login data!')
-    name = input("Your name: ")
-    surname = input("Your surname: ")
-    file_name = "users/" + name.upper() + "_" + surname.upper() + ".txt"
-    try:
-        with open(file_name, "r") as user_data_file:
+    tries = 3
+    while tries > 0:
+        name = input("Your name: ")
+        surname = input("Your surname: ")
+        file_name = "users/" + name.upper() + "_" + surname.upper() + ".txt"
+        if os.path.exists(file_name):
             return file_name
-    except:
-        print("Wrong user name or surname, try again.")
-        find_user_data_file()
+            tries = 0
+        else:
+            tries -= 1
 
 
 def get_user_data_list(user_data_file):
@@ -82,13 +84,13 @@ def check_password(user_data_list):
 
 def start_module():
     user_data_file = find_user_data_file()
-    user_data_list = get_user_data_list(user_data_file)
-    if check_password(user_data_list):
-        user = User(user_data_file)
-        print(user.data_list)
-        
-        menu.start_module(user)
+    if user_data_file is not None:
+        user_data_list = get_user_data_list(user_data_file)
+        if check_password(user_data_list):
+            user = User(user_data_file)
+            print(user.data_list)
+            menu.start_module(user)
 
 
 # # module start menu
-# start_module()
+#start_module()

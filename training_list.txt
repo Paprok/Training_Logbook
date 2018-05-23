@@ -1,2 +1,2 @@
-Chest|5	5	120	 w/85% 1RM 2/1/1/0|bench press barbell	bench press dumbells	incline press barbell	incline press dumbbell	bench flyers 
+Chest|5	5	120	 w/85% 1RM 2/1/1/0	bench press barbell	bench press dumbells	incline press barbell	incline press dumbbell	bench flyers 
 

@@ -1,6 +1,8 @@
 import log_in
 import register
 import test
+import training
+# import log
 
 
 def start_module(user):
@@ -33,7 +35,7 @@ def print_menu():
     print('2. Show profile')
     print('3. Create Training Session')
     print('4. Show/ Start Training')
-
+    print('0. Log out')
 
 def show_profile(user):
     print(user.get_name + user.get_surname)

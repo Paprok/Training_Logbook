@@ -35,6 +35,12 @@ class User():
     def get_age(self):
         return self.age
 
+    def get_test_result(self):
+        return self.test_result
+
+    def set_test_result(self, key, answer):
+        self.test_result[key] = answer
+
     def open_data(self, file_name):
         with open(file_name, "r") as user_data_file:
             user_data = user_data_file.readlines()
@@ -80,7 +86,9 @@ def start_module():
     if check_password(user_data_list):
         user = User(user_data_file)
         print(user.data_list)
+        
         menu.start_module(user)
+
 
 # # module start menu
 # start_module()

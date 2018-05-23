@@ -42,6 +42,7 @@ def show_profile(user):
     os.system('clear')
     profile_information = ["Name: ", "Surname: ", "Password: ", "Gender: ", "Age: ", "Weight: ", "Goal: "]
     user_data = user.data_list
+    test_result = user.test_result
     print("\nUser profile:\n")
 
     for item in range(len(profile_information)):
@@ -49,5 +50,10 @@ def show_profile(user):
             print(profile_information[item], "*" * len(user_data[item]))
         else:
             print(profile_information[item], user_data[item])
+
+    print("\nUser's test results:\n")
+
+    for key, value in test_result.items():
+        print(key, value)
 
     input("\nEnter to continue...")

@@ -1,7 +1,7 @@
-Chest|5	5	120	 0.85	2/1/1/0#bench press barbell!1	bench press dumbells!0.4	incline press barbell	incline press dumbbell	bench flyers	cable upright flyers	cable flyers
-Biceps|3	8	120	0.8	2/1/1/0#barbell standing curls	dumbbell standing curls	hammer grip standing curls	sitting curls	standing cable “to head” curls
-Triceps|3	8	120	0.8	2/1/1/0#french press	dips	weighted dips	cable press with straight barr	cable press with rope grips
-Delts|4	6	60	0.85	2/1/1/0#delt side raises	delt front raises	bent over rear rises	barbell upright rows	military press	arnold press
-Back|5	5	120	0.85	2/1/1/0#romanian dead lift	dead lift	one hand dumbbell row	cable seated rows barbell rows	chin ups	pull ups
-Quads|5	5	120	0.85	2/1/1/0#walking lunges	weighted squats	goblet squats	bulgarian squads	leg extension on machine
-Hams and Glutes|3	8	120	0.85	2/1/1/0#stiff legs dead lift	hams curls on machine	glute bridges weighted	single leg glute bridges	single leg dead lifts
+Chest|5	5	120	 0.85	2/1/1/0#bench press barbell!1	bench press dumbells!0.4	incline press barbell!1	incline press dumbbell!0.4	bench flyers!0.20	cable upright flyers!0.2	cable flyers!0.2
+Biceps|3	8	120	0.8	2/1/1/0#barbell standing curls!0.3	dumbbell standing curls!0.1	hammer grip standing curls!0.1	sitting curls!0.1	standing cable “to head” curls!0.08
+Triceps|3	8	120	0.8	2/1/1/0#french press!0.2	dips!0	weighted dips!0.05	cable press with straight barr!0.2	cable press with rope grips!0.2
+Delts|4	6	60	0.85	2/1/1/0#delt side raises!0.25	delt front raises!0.3	bent over rear rises!0.1	barbell upright rows!0.3	military press	arnold press!0.25
+Back|5	5	120	0.85	2/1/1/0#romanian dead lift!0.7	dead lift!1	one hand dumbbell row!0.2	cable seated rows!0.4 barbell rows!0.3	chin ups!0	pull ups!0
+Quads|5	5	120	0.85	2/1/1/0#walking lunges!0.3	weighted squats!1	goblet squats!0.4	bulgarian squads!0.2	leg extension on machine!0.3
+Hams and Glutes|3	8	120	0.85	2/1/1/0#stiff legs dead lift!0.2	hams curls on machine!0.2	glute bridges weighted!1	single leg glute bridges!0	single leg dead lifts!0.15

@@ -1,2 +1,7 @@
-Chest|5	5	120	 w/85% 1RM 2/1/1/0	bench press barbell	bench press dumbells	incline press barbell	incline press dumbbell	bench flyers 
-
+Chest|5	5	120	 0.85	2/1/1/0#bench press barbell!1	bench press dumbells!0.4	incline press barbell	incline press dumbbell	bench flyers	cable upright flyers	cable flyers
+Biceps|3	8	120	0.8	2/1/1/0#barbell standing curls	dumbbell standing curls	hammer grip standing curls	sitting curls	standing cable “to head” curls
+Triceps|3	8	120	0.8	2/1/1/0#french press	dips	weighted dips	cable press with straight barr	cable press with rope grips
+Delts|4	6	60	0.85	2/1/1/0#delt side raises	delt front raises	bent over rear rises	barbell upright rows	military press	arnold press
+Back|5	5	120	0.85	2/1/1/0#romanian dead lift	dead lift	one hand dumbbell row	cable seated rows barbell rows	chin ups	pull ups
+Quads|5	5	120	0.85	2/1/1/0#walking lunges	weighted squats	goblet squats	bulgarian squads	leg extension on machine
+Hams and Glutes|3	8	120	0.85	2/1/1/0#stiff legs dead lift	hams curls on machine	glute bridges weighted	single leg glute bridges	single leg dead lifts

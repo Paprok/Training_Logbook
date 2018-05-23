@@ -2,6 +2,7 @@ import log_in
 import register
 import test
 import training
+import os
 # import log
 
 
@@ -38,4 +39,15 @@ def print_menu():
     print('0. Log out')
 
 def show_profile(user):
-    print(user.get_name + user.get_surname)
+    os.system('clear')
+    profile_information = ["Name: ", "Surname: ", "Password: ", "Gender: ", "Age: ", "Weight: ", "Goal: "]
+    user_data = user.data_list
+    print("\nUser profile:\n")
+
+    for item in range(len(profile_information)):
+        if profile_information[item] == "Password: ":
+            print(profile_information[item], "*" * len(user_data[item]))
+        else:
+            print(profile_information[item], user_data[item])
+
+    input("\nEnter to continue...")

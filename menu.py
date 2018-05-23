@@ -3,7 +3,7 @@ import register
 import test
 
 
-def start_module(user):    
+def start_module(user):
     option = 1
     while option != '0':
         print_menu()
@@ -11,9 +11,9 @@ def start_module(user):
         if option == "1":
             test.start_module(user)
         elif option == "2":
-            show_profile(user)        
+            show_profile(user)
         elif option == "3":
-            training.start_module(user)          
+            training.start_module(user)
         elif option == "4":
             log.start_module(user)
         # elif option == "5":

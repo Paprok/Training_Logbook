@@ -53,7 +53,7 @@ class Training:
 #     return training_dict
 
 
-def generate_training(training_dict, test_result):
+def generate_training(user, training_dict):
     pass
 
 
@@ -69,8 +69,11 @@ def create_training_dict():
     return exercise_dict
 
 
-def start_module():     # dodać user jako argument
+def start_module(user):     # dodać user jako argument
     training_dict = create_training_dict()
+    generate_training(user, training_dict)
+    
 
 
-start_module()
+
+# start_module()

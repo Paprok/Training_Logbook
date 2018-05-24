@@ -12,7 +12,7 @@ class User():
         self.age = self.data_list[4]
         self.weight = self.data_list[5]
         self.goal = self.data_list[6]
-        self.test_result = self.get_test_result(file_name)
+        self.test_result = self.create_test_result(file_name)
 
     def get_name(self):
         return self.name
@@ -40,7 +40,7 @@ class User():
             user_data = user_data_file.readlines()
         return user_data[0].split("\t")
 
-    def get_test_result(self, file_name):
+    def create_test_result(self, file_name):
         with open(file_name, "r",) as user_data_file:
             reader = user_data_file.readlines()
             user_test_list = reader[1].split("\t")

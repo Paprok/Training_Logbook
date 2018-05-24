@@ -1,5 +1,5 @@
 import os.path
-
+import os
 
 class User():
     def __init__(self):
@@ -104,6 +104,8 @@ class User():
 
 
 def start_module():
+    os.system('clear')
     user = User()
+    os.system('clear')
     if not user.profile_exists:
         user.export_data()

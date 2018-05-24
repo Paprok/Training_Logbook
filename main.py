@@ -6,6 +6,7 @@ import os
 
 
 def main():
+    os.system('clear')
     while True:
         handle_menu()
         try:

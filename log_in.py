@@ -114,6 +114,7 @@ def check_password(user_data_list):
 
 
 def start_module():
+    os.system('clear')
     user_data_file = find_user_data_file()
     if user_data_file is not None:
         user_data_list = get_user_data_list(user_data_file)
@@ -121,3 +122,4 @@ def start_module():
             user = User(user_data_file)
             print(user.data_list)
             menu.start_module(user)
+    os.system('clear')

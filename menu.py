@@ -11,13 +11,18 @@ def start_module(user):
     while option != '0':
         print_menu()
         option = input('\nPlease choose option: ')
+        os.system('clear')
         if option == "1":
+            os.system('clear')
             test.start_module(user)
         elif option == "2":
+            os.system('clear')
             show_profile(user)
         elif option == "3":
+            os.system('clear')
             training.start_module(user)
         elif option == "4":
+            os.system('clear')
             log.start_module(user)
         # elif option == "5":
         #     # 
@@ -27,7 +32,7 @@ def start_module(user):
             print('Thanks for using our training programm! Good luck!')
             user.save_user_data(user.data_file_name)
         else:
-            raise KeyError("There is no such option.")
+            print("There is no such option.\n")
 
 
 def print_menu():
@@ -59,3 +64,4 @@ def show_profile(user):
         print(key, value)
 
     input("\nEnter to continue...")
+    os.system('clear')

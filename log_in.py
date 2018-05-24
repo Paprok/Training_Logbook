@@ -13,7 +13,7 @@ class User():
         self.weight = self.data_list[5]
         self.goal = self.data_list[6]
         self.test_result = self.get_test_result(file_name)
-  
+
     def get_name(self):
         return self.name
 
@@ -53,6 +53,11 @@ class User():
             print(user_test_dict)
 
         return user_test_dict
+
+    # ?????????? funkcja ktora zmienia dany atrybut classy User (do uzycia przy tescie), 
+    # funkcja ktora zbiera wszystkie dane i nadpisuje plik users/imie_nazwisko.txt
+    # uzyc ja do zapisu po wyjsciu
+    #
 
 
 def find_user_data_file():

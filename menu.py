@@ -43,6 +43,7 @@ def show_profile(user):
     profile_information = ["Name: ", "Surname: ", "Password: ", "Gender: ", "Age: ", "Weight: ", "Goal: "]
     user_data = user.data_list
     test_result = user.test_result
+    
     print("\nUser profile:\n")
 
     for item in range(len(profile_information)):

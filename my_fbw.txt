@@ -1,4 +1,4 @@
-hams_and_glutes	hams curls on machine	3	8	120	20	2/1/1/0
-delts	delt side raises	2	5	120	20	2/1/1/0
-biceps	sitting curls	4	3	120	30	2/1/3/0
-chest	incline press barbell	3	4	120	50	2/1/1/0
+hams_and_glutes	hams curls on machine	3	8	8	20	2/1/1/0
+delts	delt side raises	2	5	1	20	2/1/1/0
+biceps	sitting curls	4	3	1	30	2/1/3/0
+chest	incline press barbell	3	4	1	50	2/1/1/0

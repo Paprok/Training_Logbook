@@ -1,3 +1,4 @@
+import os
 # training module
 class Training:
     def __init__(self, stats_file, exercise_file):
@@ -128,6 +129,7 @@ def clear_program_log(file_name):
 def start_module(user):     # dodać user jako argument
     training_dict = create_training_dict()
     generate_program(user, training_dict)
+    os.system('clear')
 
 
 

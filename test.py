@@ -1,3 +1,4 @@
+import os
 # test functions
 
 
@@ -21,3 +22,4 @@ def start_module(user):
                     escape = True
                 else:
                     user.set_test_result(key, answer)
+    os.system('clear')

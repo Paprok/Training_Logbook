@@ -2,6 +2,7 @@
 
 import time
 import datetime
+import os
 
 
 class LogBook:
@@ -85,12 +86,17 @@ class LogBook:
 
         return self.is_training
 
+    def beep(self, seconds, frequency):
+        return os.system('play --no-show-progress --null --channels 1 synth %s sine %f' % (seconds, frequency))
+
     def rest_count_down(self, time_of_rest):
         print("\n\tREST FOR...\n")
         for i in range(time_of_rest, 1, -1):
             seconds = i
             print('{:->10} sec'.format(seconds))
             time.sleep(1.0)
+        self.beep(1, 440)
+
 
     # Write workout data to file
     def log_result_in(self, an_input):
@@ -103,4 +109,4 @@ def start_module():
     working_out.print_workout()
 
 
-start_module()
+#start_module()

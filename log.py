@@ -10,6 +10,7 @@ class LogBook:
         self.workout_for_today = workout_for_today
         self.exercises_list = self.load_file()
         self.is_training = True
+        # self.start_time = self.workout_duration(start=True)
 
     # Get exercises from file
     def load_file(self):
@@ -42,9 +43,10 @@ class LogBook:
             try:
                 lets_start = str.upper(input("Insert Y to start or N to quit to menu: "))
                 if lets_start == 'Y':
-                    self.get_workout_results()
+                    start_workout_time = time.time()
+                    self.get_workout_results(start_workout_time)
                     corect_input = True
-                    # self.workout_duration()
+                    # self.workout_duration(start=True)
                 elif lets_start == 'N':
                     print("stop")
                     self.is_training = False
@@ -55,11 +57,18 @@ class LogBook:
             except ValueError as err:
                 print('You entered wrong input! {}'.format(err))
 
-    # def workout_duration(self):
-
+    # def workout_duration(self, start=False, end_workout=False):
+    #     if end_workout:
+    #         current_time = time.time()           
+    #         workout_time_total = round(current_time - self.start_time)
+    #         return workout_time_total
+    #     elif start:
+    #         start_time = time.time()            
+    #         return start
 
     # Get result via user input
-    def get_workout_results(self):
+    # recieve time of workout begining and retur duration time to file
+    def get_workout_results(self, start_workout_time):
         for an_excercise in range(len(self.exercises_list)):
             print("Do excersise no{}\n\t-{}".format(an_excercise+1, self.load_file()[an_excercise][1]))
             no_of_sets = int(self.exercises_list[an_excercise][2])
@@ -75,6 +84,10 @@ class LogBook:
                     else:
                         corect_input = True
             self.log_result_in('\n')
+        # self.log_result_in(self.workout_duration(end_workout=True))
+        current_time = time.time()
+        workout_duration_time = round(current_time - start_workout_time)
+        self.log_result_in(workout_duration_time)
         self.is_training = False
         return self.is_training
 

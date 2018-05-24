@@ -33,6 +33,9 @@ class User():
     def get_test_result(self):
         return self.test_result
 
+    def get_goal(self):
+        return self.goal.strip()
+
     def set_test_result(self, key, answer):
         self.test_result[key] = answer
 

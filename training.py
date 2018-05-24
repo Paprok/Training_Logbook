@@ -33,6 +33,13 @@ class Training:
             print(exercise_name, weight_scale)
             return exercise_name, weight_scale
 
+    def get_stats(self, goal):
+        if goal == 'strength':
+            return self.strength
+        elif goal == 'hypertrophy':
+            return self.hypertrophy
+        else:
+            return self.fat_burn
 
 class Programm:
     def __init__():
@@ -74,13 +81,18 @@ def generate_program(user, training_dict):
         'quads': 'Squat',
         'hams and glutes': 'Squat',
     }
+    file_name = 'training_program.txt'
+    clear_program_log(file_name)
+
     for training in training_dict:
         exercise_name, weight_scale = training_dict[training].get_random_exercise()
         test = training_to_test[training]
         weight = user.get_test_result()[test]
         print(weight)
-
-
+        goal = user.get_goal()
+        stats = training_dict[training].get_stats(goal)
+        print(stats)
+        add_program_log(training, exercise_name, weight_scale, weight, stats, file_name)
 
 
 def create_training_dict():
@@ -93,6 +105,24 @@ def create_training_dict():
     print(exercise_dict)
     print(exercise_dict['chest'].strength)
     return exercise_dict
+
+
+def add_program_log(training, exercise_name, weight_scale, weight, stats, file_name):
+    '''Marked to refactory!!! Deadline 05.2010'''
+    finall_weight = int(round(float(weight)*float(stats[3])*float(weight_scale)))
+    line_to_save = training + '\t'
+    line_to_save += exercise_name.strip() + '\t'
+    line_to_save += stats[0] + '\t' + stats[1] + '\t' + stats[2] + '\t'
+    line_to_save += str(finall_weight) + '\t'
+    line_to_save += stats[4] + '\n'
+    
+    with open(file_name, 'a') as log:
+        log.write(line_to_save)
+
+
+def clear_program_log(file_name):
+    with open(file_name, 'w') as clear:
+        clear.write('')
 
 
 def start_module(user):     # dodać user jako argument

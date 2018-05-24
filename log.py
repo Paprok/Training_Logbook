@@ -1,6 +1,7 @@
 # log book - open it when on the gym. PrintOut exercises and get results.
 
 import time
+import datetime
 
 
 class LogBook:
@@ -10,7 +11,6 @@ class LogBook:
         self.workout_for_today = workout_for_today
         self.exercises_list = self.load_file()
         self.is_training = True
-        # self.start_time = self.workout_duration(start=True)
 
     # Get exercises from file
     def load_file(self):
@@ -57,15 +57,6 @@ class LogBook:
             except ValueError as err:
                 print('You entered wrong input! {}'.format(err))
 
-    # def workout_duration(self, start=False, end_workout=False):
-    #     if end_workout:
-    #         current_time = time.time()           
-    #         workout_time_total = round(current_time - self.start_time)
-    #         return workout_time_total
-    #     elif start:
-    #         start_time = time.time()            
-    #         return start
-
     # Get result via user input
     # recieve time of workout begining and retur duration time to file
     def get_workout_results(self, start_workout_time):
@@ -79,17 +70,27 @@ class LogBook:
                     try:
                         result_of_set = int(input('Set no{}. Enter here no of reps: '.format(a_set + 1)))
                         self.log_result_in(result_of_set)
+                        self.rest_count_down(int(self.exercises_list[an_excercise][4]))
                     except ValueError:
                         print("Please enter number of reps!")
                     else:
                         corect_input = True
             self.log_result_in('\n')
-        # self.log_result_in(self.workout_duration(end_workout=True))
+
         current_time = time.time()
         workout_duration_time = round(current_time - start_workout_time)
-        self.log_result_in(workout_duration_time)
+        self.log_result_in('Your workout duration is: ')
+        self.log_result_in(str(datetime.timedelta(seconds=workout_duration_time)))
         self.is_training = False
+
         return self.is_training
+
+    def rest_count_down(self, time_of_rest):
+        print("\n\tREST FOR...\n")
+        for i in range(time_of_rest, 1, -1):
+            seconds = i
+            print('{:->10} sec'.format(seconds))
+            time.sleep(1.0)
 
     # Write workout data to file
     def log_result_in(self, an_input):

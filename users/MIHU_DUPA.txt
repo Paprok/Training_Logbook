@@ -1,0 +1,2 @@
+mihu	dupa	123	male	18	90	lose body fat
+Squat#0	Dead Lift#0	Millitary Press#0	Bench Press#0	Pull Ups#0	Run 5km#0

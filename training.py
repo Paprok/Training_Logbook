@@ -129,6 +129,8 @@ def clear_program_log(file_name):
 def start_module(user):     # dodać user jako argument
     training_dict = create_training_dict()
     generate_program(user, training_dict)
+    print('Your training program was generated. Use Show program to view it')
+    input('Press enter to continue...')
     os.system('clear')
 
 

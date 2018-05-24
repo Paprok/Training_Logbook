@@ -11,6 +11,11 @@ It is very early alfa version :) so don't expect flashy graphic and mobile versi
 
 Python3 and any working computer :)
 
+To get sound on timer instal sox [Sound eXchange](http://sox.sourceforge.net/)
+
+sudo apt-get install sox 
+
+
 ```
 
 ```

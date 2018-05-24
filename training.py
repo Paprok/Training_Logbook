@@ -25,13 +25,13 @@ class Training:
                 temp[1] = float(temp[1])
                 exercise_list_of_lists.append(temp)
             exercise_dict = dict(exercise_list_of_lists)
-            print(exercise_dict)
+            # print(exercise_dict)
         return exercise_dict
 
     def get_random_exercise(self):
         for exercise_name in self.exercise_dict:
             weight_scale = self.exercise_dict[exercise_name]
-            print(exercise_name, weight_scale)
+            # print(exercise_name, weight_scale)
             return exercise_name, weight_scale
 
     def get_stats(self, goal):
@@ -89,10 +89,10 @@ def generate_program(user, training_dict):
         exercise_name, weight_scale = training_dict[training].get_random_exercise()
         test = training_to_test[training]
         weight = user.get_test_result()[test]
-        print(weight)
+        # print(weight)
         goal = user.get_goal()
         stats = training_dict[training].get_stats(goal)
-        print(stats)
+        # print(stats)
         add_program_log(training, exercise_name, weight_scale, weight, stats, file_name)
 
 
@@ -103,8 +103,8 @@ def create_training_dict():
         stats_file = 'trainings/{0}_stats.txt'.format(exercise)
         exercise_file = 'trainings/{0}.txt'.format(exercise)
         exercise_dict[exercise] = Training(stats_file, exercise_file)
-    print(exercise_dict)
-    print(exercise_dict['chest'].strength)
+    # print(exercise_dict)
+    # print(exercise_dict['chest'].strength)
     return exercise_dict
 
 

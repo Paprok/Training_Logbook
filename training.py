@@ -12,13 +12,14 @@ class Training:
         stats_list = []
         with open(stats_file, 'r') as stats:
             for line in stats:
-                stats_list.append(line[:-1].split('\t'))
+                stats_list.append(line.replace('\n', '').split('\t'))    #removed [:-1]
+        # print(stats_list)        
         return stats_list
 
     def load_exercise(self, exercise_file):
         with open(exercise_file, 'r') as exercise:
             exercise = exercise.readlines()
-            exercise_list = exercise[0][:-1].split('\t')
+            exercise_list = exercise[0].replace('\n', '').split('\t')    #removed [:-1]
             exercise_list_of_lists = []
             for item in exercise_list:
                 temp = item.split('!')
@@ -46,41 +47,16 @@ class Programm:
     def __init__():
         pass
 
-# def load_file():
-#     with open('training_list.txt', 'r+') as training_file:
-#         training_list = training_file.readlines()
-#         to_be_dict = []
-#         for line in training_list:
-#             to_be_dict.append(line.replace('\n', '').split('|'))
-#         # print(to_be_dict)
-#         training_dict = dict(to_be_dict)
-#     return training_dict
-
-
-# def format_dict(training_dict):
-#     for key in training_dict:
-#         training_dict[key] = training_dict[key].split('#')
-#         training_dict[key][0] = training_dict[key][0].split('\t')
-#         training_dict[key][1] = training_dict[key][1].split('\t')
-#         # print(training_dict)
-#     return training_dict
-
-
-# def create_training_dict():
-    
-#     print(training_dict)
-#     return training_dict
-
 
 def generate_program(user, training_dict):
     training_to_test = {
         'chest': 'Bench Press',
         'biceps': 'Dead Lift',
         'triceps': 'Bench Press',
-        'delts': 'Military Press',
+        'deltoids': 'Military Press',
         'back': 'Dead Lift',
         'quads': 'Squat',
-        'hams and glutes': 'Squat',
+        'hams_and_glutes': 'Squat',
     }
     file_name = 'training_program.txt'
     clear_program_log(file_name)
@@ -98,13 +74,13 @@ def generate_program(user, training_dict):
 
 def create_training_dict():
     exercise_dict = {}
-    exercise_names = ['chest', 'biceps']
+    exercise_names = ['chest', 'biceps', 'triceps', 'back', 'quads', 'hams_and_glutes', 'deltoids']
     for exercise in exercise_names:
         stats_file = 'trainings/{0}_stats.txt'.format(exercise)
         exercise_file = 'trainings/{0}.txt'.format(exercise)
         exercise_dict[exercise] = Training(stats_file, exercise_file)
     # print(exercise_dict)
-    # print(exercise_dict['chest'].strength)
+    # print(exercise_dict['deltoids'].strength)
     return exercise_dict
 
 

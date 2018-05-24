@@ -25,7 +25,18 @@ class Training:
                 exercise_list_of_lists.append(temp)
             exercise_dict = dict(exercise_list_of_lists)
             print(exercise_dict)
+        return exercise_dict
 
+    def get_random_exercise(self):
+        for exercise_name in self.exercise_dict:
+            weight_scale = self.exercise_dict[exercise_name]
+            print(exercise_name, weight_scale)
+            return exercise_name, weight_scale
+
+
+class Programm:
+    def __init__():
+        pass
 
 # def load_file():
 #     with open('training_list.txt', 'r+') as training_file:
@@ -53,8 +64,23 @@ class Training:
 #     return training_dict
 
 
-def generate_training(user, training_dict):
-    pass
+def generate_program(user, training_dict):
+    training_to_test = {
+        'chest': 'Bench Press',
+        'biceps': 'Dead Lift',
+        'triceps': 'Bench Press',
+        'delts': 'Military Press',
+        'back': 'Dead Lift',
+        'quads': 'Squat',
+        'hams and glutes': 'Squat',
+    }
+    for training in training_dict:
+        exercise_name, weight_scale = training_dict[training].get_random_exercise()
+        test = training_to_test[training]
+        weight = user.get_test_result()[test]
+        print(weight)
+
+
 
 
 def create_training_dict():
@@ -71,8 +97,7 @@ def create_training_dict():
 
 def start_module(user):     # dodać user jako argument
     training_dict = create_training_dict()
-    generate_training(user, training_dict)
-    
+    generate_program(user, training_dict)
 
 
 

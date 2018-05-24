@@ -25,6 +25,7 @@ def start_module(user):
         #     #
         elif option == "0":
             print('Thanks for using our training programm! Good luck!')
+            user.save_user_data(user.data_file_name)
             # funkcja do zapisania danych?
         else:
             raise KeyError("There is no such option.")

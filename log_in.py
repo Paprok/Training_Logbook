@@ -4,6 +4,7 @@ import menu
 
 class User():
     def __init__(self, file_name):
+        self.data_file_name = file_name
         self.data_list = self.open_data(file_name)
         self.name = self.data_list[0]
         self.surname = self.data_list[1]
@@ -48,11 +49,34 @@ class User():
 
             for test in user_test_list:
                 test_and_score = test.split("#")
-                print(test_and_score)
+                # print(test_and_score)
                 user_test_dict[test_and_score[0]] = test_and_score[1]
-            print(user_test_dict)
+            # print(user_test_dict)
 
         return user_test_dict
+
+    def data_list_to_string(self, data_list):
+        data_string = ''
+
+        for data in data_list:
+            data_string += data + '\t'
+
+        data_string = data_string[:-1]
+
+        return data_string
+
+    def test_result_to_string(self, test_result):
+        test_result_string = ''
+
+        for key, value in self.test_result.items():
+            test_result_string += key + "#" + value + "\t"
+        test_result_string = test_result_string[:-1]
+
+        return test_result_string
+
+    def save_user_data(self, data_file_name):
+        with open(data_file_name, "w") as data_file:
+            data_file.write(self.data_list_to_string(self.data_list) + self.test_result_to_string(self.test_result))
 
     # ?????????? funkcja ktora zmienia dany atrybut classy User (do uzycia przy tescie), 
     # funkcja ktora zbiera wszystkie dane i nadpisuje plik users/imie_nazwisko.txt

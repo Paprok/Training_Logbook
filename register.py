@@ -110,5 +110,3 @@ def start_module():
         user.export_data()
 
 #start_module()
-
-# dodać sprawdzanie czy użytkownik już istnieje

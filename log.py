@@ -1,15 +1,17 @@
 # log book - open it when on the gym. PrintOut exercises and get results.
 
 import time
-# import menu
 
 
 class LogBook:
+    '''This class work as a diary/log book for user. Workout results can be logged in and saved to file.'''
 
     def __init__(self, workout_for_today,):
         self.workout_for_today = workout_for_today
         self.exercises_list = self.load_file()
+        self.is_training = True
 
+    # Get exercises from file
     def load_file(self):
 
         with open(self.workout_for_today) as file:
@@ -22,15 +24,18 @@ class LogBook:
 
         return exercises
 
+    # Print workout plan
     def print_workout(self):
-        print("\nHello! Today you have following exercises to do:\n")
-        for i in range(len(self.exercises_list)):           
-            print('Exercise no{0}\n\t{1}. Do {2} sets of {3} repetitions with {5}kg\n\tRest {4}sek between sets.'
-                  'Your tempo should be {6}\n'
-                  .format(i+1, self.exercises_list[i][1], self.exercises_list[i][2], self.exercises_list[i][3],
-                          self.exercises_list[i][4], self.exercises_list[i][5], self.exercises_list[i][6]))
-        self.start_exercise()
+        while self.is_training:
+            print("\nHello! Today you have following exercises to do:\n")
+            for i in range(len(self.exercises_list)):           
+                print('Exercise no{0}\n\t{1}. Do {2} sets of {3} repetitions with {5}kg\n\tRest {4}sek between sets.'
+                      'Your tempo should be {6}\n'
+                      .format(i+1, self.exercises_list[i][1], self.exercises_list[i][2], self.exercises_list[i][3],
+                              self.exercises_list[i][4], self.exercises_list[i][5], self.exercises_list[i][6]))
+            self.start_exercise()
 
+    # Ask user if he want to start working out
     def start_exercise(self):
         corect_input = False
         while not corect_input:
@@ -42,15 +47,19 @@ class LogBook:
                     # self.workout_duration()
                 elif lets_start == 'N':
                     print("stop")
-                    exit()
+                    self.is_training = False
+                    return self.is_training
                     # menu.start_module()
                 else:
                     raise ValueError('{} is not corect choice.'.format(lets_start))
             except ValueError as err:
                 print('You entered wrong input! {}'.format(err))
 
-    def get_workout_results(self):
+    # def workout_duration(self):
 
+
+    # Get result via user input
+    def get_workout_results(self):
         for an_excercise in range(len(self.exercises_list)):
             print("Do excersise no{}\n\t-{}".format(an_excercise+1, self.load_file()[an_excercise][1]))
             no_of_sets = int(self.exercises_list[an_excercise][2])
@@ -66,16 +75,18 @@ class LogBook:
                     else:
                         corect_input = True
             self.log_result_in('\n')
+        self.is_training = False
+        return self.is_training
 
+    # Write workout data to file
     def log_result_in(self, an_input):
         with open('workoout_user_date', 'a') as file:
             file.write(str(an_input) + ' ')
 
 
 def start_module():
-    cwiczymy = LogBook('my_fbw.txt')
-
-    cwiczymy.print_workout()
+    working_out = LogBook('my_fbw.txt')
+    working_out.print_workout()
 
 
 start_module()

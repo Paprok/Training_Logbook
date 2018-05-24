@@ -9,7 +9,7 @@ It is very early alfa version :) so don't expect flashy graphic and mobile versi
 
 ### Prerequisites
 
-Python3 and any working computer
+Python3 and any working computer :)
 
 ```
 
@@ -27,9 +27,9 @@ Python3 and any working computer
 
 
 ## Authors
-* **Rafał Becla** - *Code dev, System architecture* - [Paprok]https://github.com/Paprok
+* **Rafał Becla** - *Code dev, System architecture* - [Paprok](https://github.com/Paprok)
 * **Michal Wisniewski** - *Concept development, Code dev* - [mihuwis](https://github.com/mihuwis)
-* **Dariusz Domanski** - *Code dev* - [darDomanski]https://github.com/darDomanski
+* **Dariusz Domanski** - *Code dev* - [darDomanski](https://github.com/darDomanski)
 
 ## Acknowledgments
 

@@ -1,5 +1,6 @@
 import os.path
 
+
 class User():
     def __init__(self):
         self.profile_exists = False
@@ -96,8 +97,6 @@ class User():
                                                                 'Run 5km'])
         tests_to_export = tests_to_export + "#0"
         return tests_to_export
-        
-
 
     def export_data(self):
         with open(self.file_name, "w") as data_file:
@@ -108,5 +107,3 @@ def start_module():
     user = User()
     if not user.profile_exists:
         user.export_data()
-
-#start_module()

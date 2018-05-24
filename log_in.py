@@ -78,11 +78,6 @@ class User():
         with open(data_file_name, "w") as data_file:
             data_file.write(self.data_list_to_string(self.data_list) + self.test_result_to_string(self.test_result))
 
-    # ?????????? funkcja ktora zmienia dany atrybut classy User (do uzycia przy tescie), 
-    # funkcja ktora zbiera wszystkie dane i nadpisuje plik users/imie_nazwisko.txt
-    # uzyc ja do zapisu po wyjsciu
-    #
-
 
 def find_user_data_file():
     print('\nPlease enter your login data!')
@@ -126,7 +121,3 @@ def start_module():
             user = User(user_data_file)
             print(user.data_list)
             menu.start_module(user)
-
-
-# # module start menu
-#start_module()

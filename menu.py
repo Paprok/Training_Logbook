@@ -26,7 +26,6 @@ def start_module(user):
         elif option == "0":
             print('Thanks for using our training programm! Good luck!')
             user.save_user_data(user.data_file_name)
-            # funkcja do zapisania danych?
         else:
             raise KeyError("There is no such option.")
 
@@ -39,12 +38,13 @@ def print_menu():
     print('4. Show/ Start Training')
     print('0. Log out')
 
+
 def show_profile(user):
     os.system('clear')
     profile_information = ["Name: ", "Surname: ", "Password: ", "Gender: ", "Age: ", "Weight: ", "Goal: "]
     user_data = user.data_list
     test_result = user.test_result
-    
+
     print("\nUser profile:\n")
 
     for item in range(len(profile_information)):

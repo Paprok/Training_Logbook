@@ -3,7 +3,7 @@ import register
 import test
 import training
 import os
-# import log
+import log
 
 
 def start_module(user):
@@ -23,7 +23,7 @@ def start_module(user):
             training.start_module(user)
         elif option == "4":
             os.system('clear')
-            log.start_module(user)
+            log.start_module()
         # elif option == "5":
         #     # 
         # elif option == "6":

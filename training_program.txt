@@ -1,2 +1,2 @@
-biceps	dumbbell standing curls	4	15	30	6	3/1/1/
-chest	incline press barbell	4	15	30	599	3/1/2/
+biceps	sitting curls	4	15	30	6	3/1/1/
+chest	bench flyers	4	15	30	120	3/1/2/

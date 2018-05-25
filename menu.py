@@ -61,7 +61,7 @@ def show_profile(user):
     print("\nUser's test results:\n")
 
     for key, value in test_result.items():
-        print(key, value)
+        print(key, ":", value)
 
     input("\nEnter to continue...")
     os.system('clear')

@@ -105,7 +105,7 @@ class LogBook:
 
 
 def start_module():
-    working_out = LogBook('my_fbw.txt')
+    working_out = LogBook('training_program.txt')
     working_out.print_workout()
 
 

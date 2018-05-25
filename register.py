@@ -91,7 +91,7 @@ class User():
     def tests_to_export(self):
         tests_to_export = "#0\t".join(exercise for exercise in ['Squat',
                                                                 'Dead Lift',
-                                                                'Millitary Press',
+                                                                'Military Press',
                                                                 'Bench Press',
                                                                 'Pull Ups',
                                                                 'Run 5km'])

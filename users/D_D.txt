@@ -1,2 +1,6 @@
 d	d	d	male	1	1	lose body fat
+<<<<<<< HEAD
 Pull Ups#9	Millitary Press#99	Squat#99	Run 5km#99	Bench Press#999	Dead Lift#99
+=======
+Run 5km#40	Pull Ups#5	Dead Lift#110	Military Press#40	Squat#110	Bench Press#40
+>>>>>>> 1fbc555b4636de0d8220f24a93b78a6eb2909efb

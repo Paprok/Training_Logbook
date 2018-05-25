@@ -1,2 +1,12 @@
+<<<<<<< HEAD
 biceps	sitting curls	4	15	30	6	3/1/1/
 chest	bench flyers	4	15	30	120	3/1/2/
+=======
+back	romanian dead lift	4	15	30	46	2/1/1/0
+chest	bench press barbell	4	15	30	24	3/1/2/0
+deltoids	bent over rear rises	4	15	15	2	2/1/2/0
+biceps	sitting curls	4	15	30	7	3/1/1/0
+quads	goblet squats	4	15	30	26	2/1/1/0
+triceps	cable press with rope grips	4	15	15	5	3/1/1/0
+hams_and_glutes	hams curls on machine	2	15	30	13	2/1/1/0
+>>>>>>> 1fbc555b4636de0d8220f24a93b78a6eb2909efb
